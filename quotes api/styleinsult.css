@@ -1,0 +1,47 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    background-image: url(./background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    align-items: center;
+}
+
+p{
+    font-size: 0.3in;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center top;
+    padding:100px 0px;
+
+}
+.insultbox{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border:5px solid black;
+    border-radius:10px;
+    height:20vh;
+    margin: 0px 280px;
+    text-align: center;
+}
+.button{
+    font-size: 0.3in;
+    background-color: rgb(240, 236, 108);
+    border-radius:10px;
+    padding:10px 10px;
+    margin:40px 10px;
+
+}
+.button:hover{
+    cursor: pointer;
+}
+
+
