@@ -106,16 +106,12 @@ List down all the future plans for the project here
 
 ## 👨‍💻Team Members
 
-Add names of your team members with their emails and links to their GitHub accounts
-
 - Unmani Shinde(https://github.com/unmani-shinde): usshinde_b21@el.vjti.ac.in
 - Soham Lad(https://github.com/Sohamlad2003): ssLad_b21@el.vjti.ac.in 
 - Aishwarya Ravi(https://github.com/AishwaryaRavi07): aravi_b21@el.vjti.ac.in
 - Paras Pandita(https://github.com/ParasPandita1): ppandita_b21@el.vjti.ac.in
 
 ## 👨‍🏫Mentors
-
-Add names of your mentors with their emails and links to their GitHub accounts
 
 - Sarvagnya Purohit(https://github.com/saRvaGnyA): Email 
 - Ketaki Deshmukh(https://github.com/KetakiMDeshmukh): kmdeshmukh_b20@ce.vjti.ac.in
