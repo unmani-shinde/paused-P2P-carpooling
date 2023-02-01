@@ -1,0 +1,122 @@
+.publish{
+    align-items: center;
+    justify-content: center;
+    padding:2rem;
+    margin:2rem;
+}
+
+.publish .secContainer{
+    align-items: center;
+    justify-content: center;
+    
+
+
+}
+
+.publish .secContainer .publishText{
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.publish .secContainer .publishText h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    padding-top: 1rem;
+    
+}
+
+.publish .secContainer .publishText h4{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    padding-top: 1rem;
+    
+}
+
+.publish .secContainer .publishBtn{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 10px;
+    padding-top: 1.5rem;
+    justify-content: center;
+    padding-left: 40rem;
+    
+
+}
+
+.publish .secContainer .publishBtn .btn{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+
+}
+
+.publish .secContainer .publishCard .btn{
+    padding-top:5rem;
+}
+
+
+.publish .secContainer .publishCard .locationDiv{
+    width:100%;
+    padding-top: 5rem;
+    align-items: flex-start;
+
+}
+
+.publish .secContainer .publishCard .locationDiv label{
+    display:block;
+    color:blue;
+    font-weight: 600px;
+    font-size: 20px;
+    padding-bottom: .4rem;
+    
+
+}
+
+.publish .secContainer .publishCard .distDiv{
+    width:100%;
+}
+
+
+.publish .secContainer .publishCard .priceDiv{
+    width:100%;
+}
+
+.publish .secContainer .publishCard .locationDiv input{
+    width:100%;
+    background: rgb(244, 235, 235);
+    border-radius: 10px;
+    border:none;
+    padding:10px;
+    font-size: 15px;
+
+}
+
+.publish .secContainer .publishCard .btn{
+    width: 250px;
+    padding: 1rem 2.5rem;
+    color:white;
+    font-weight: 600;
+    margin-top: 105px;
+}
+
+.publish .secContainer .publishCard.grid{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.publish .secContainer .publishText .sideImage img{
+    width: 1100px;
+    height: 100%;
+    padding:30px;
+    padding-left: 350px;
+    
+    
+    
+}
+
+
+
+
+
+
