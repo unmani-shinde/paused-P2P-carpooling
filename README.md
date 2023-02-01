@@ -3,12 +3,12 @@
     <img src="https://res.cloudinary.com/dn6vz8exv/image/upload/v1665664791/inh_zzefoy.jpg" alt="CoC Inheritance 2022" width="500" height="166">
   </a>
   <br>
-  Project Name
+  Peer-2-Peer Carpooling Using Blockchain Technology
 </h1>
 
 <div align="center">
-   <strong>Project Name</strong> - One Sentence Description of your project<br>
-  CoC Inheritance 2022 || Team Name <br> <br>
+   <strong>Project Name</strong> - Decentralised P2P Carpooling Network<br>
+  CoC Inheritance 2022 || PAUS-ed <br> <br>
   Add any <a href="https://shields.io/">Shields</a> here
 </div>
 <hr>
@@ -108,15 +108,17 @@ List down all the future plans for the project here
 
 Add names of your team members with their emails and links to their GitHub accounts
 
-- [Team Member 1 Name](https://github.com/): Email 
-- [Team Member 2 Name](https://github.com/): Email 
+- Unmani Shinde(https://github.com/unmani-shinde): usshinde_b21@el.vjti.ac.in
+- Soham Lad(https://github.com/Sohamlad2003): ssLad_b21@el.vjti.ac.in 
+- Aishwarya Ravi(https://github.com/AishwaryaRavi07): aravi_b21@el.vjti.ac.in
+- Paras Pandita(https://github.com/ParasPandita1): ppandita_b21@el.vjti.ac.in
 
 ## 👨‍🏫Mentors
 
 Add names of your mentors with their emails and links to their GitHub accounts
 
-- [Mentor 1 Name](https://github.com/): Email 
-- [Mentor 2 Name](https://github.com/): Email 
+- Sarvagnya Purohit(https://github.com/saRvaGnyA): Email 
+- Ketaki Deshmukh(https://github.com/KetakiMDeshmukh): kmdeshmukh_b20@ce.vjti.ac.in
 
 ## 📱Screenshots
 Add a few screenshots for parts of the project completed till now to give the viewer a quick idea of what your project looks like. After all, a picture speaks a thousand words.
