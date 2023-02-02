@@ -1,0 +1,105 @@
+
+
+
+.home{
+    height: 80vh;
+    background-image:url('../../assets/Images/main\ gps\ car.jpg') ;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:auto;
+    position: relative;
+
+}
+
+.home .secContainer .homeText{
+    text-align: center;
+    
+    
+
+}
+.home .secContainer .homeText .title{
+
+    color:white;
+    font-size: 2rem;
+    font-weight:700;
+    line-height: 2.5rem;
+}
+
+.home .secContainer .homeText .subTitle{
+    color:white;
+    opacity: 0.9;
+    font-size: 25px;
+    font-weight: 300;
+    padding:1rem 0;
+    max-width: 70%;
+    text-align:center;
+    margin:auto;
+}
+
+.home .secContainer .homeText .btn{
+    padding: 1rem 1.5rem;
+    font-size: 15px;
+}
+
+.home .secContainer .homeCard{
+    width:80%;
+    border-radius: 1rem;
+    padding: 2rem;
+    background: white;
+    position: absolute;
+    gap:1rem;
+    justify-content: center;
+    bottom: -10%;
+    transform: translate(-50%);
+    left:50%;
+    box-shadow:0 2px 8px 4px rgba(178,178,178,0.45);
+
+}
+
+.home .secContainer .homeCard .locationDiv{
+    width:100%;
+
+}
+
+.home .secContainer .homeCard .locationDiv label{
+    display:block;
+    color:blue;
+    font-weight: 600px;
+    font-size: 18px;
+    padding-bottom: .4rem;
+
+}
+
+.home .secContainer .homeCard .distDiv{
+    width:100%;
+}
+
+
+.home .secContainer .homeCard .priceDiv{
+    width:100%;
+}
+
+.home .secContainer .homeCard .locationDiv input{
+    width:100%;
+    background: rgb(244, 235, 235);
+    border-radius: 10px;
+    border:none;
+    padding:10px;
+    font-size: 13px;
+
+}
+
+.home .secContainer .homeCard .btn{
+    width: 250px;
+    padding: 1rem 2rem;
+    color:white;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+
+
