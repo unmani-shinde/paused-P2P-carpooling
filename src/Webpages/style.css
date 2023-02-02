@@ -1,39 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
-
-body {
-    height: 100vh;
+.parent {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
-    background: linear-gradient(135deg,#E975A8, #726CF8);
-}
-    
-
-.parent #root{
-    
-}
-
+    background: linear-gradient(135deg, #E975A8, #726CF8);
+    min-height: 100vh;
+} 
 
 .container {
-    max-width: 700px;
-    max-height: 800px;
-    
-    width: 100%;
-    background-color: #fff;
-    padding: 25px 30px;
+    margin: 2rem;
+    padding: 2rem 2rem;
     border-radius: 15px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
+#dabba{
+    background-color: #fff;
+}
 
-.container .title {
+#naam{
     font-size: 25px;
     font-weight: 500;
     position: relative;
 }
 
-.container .title::before {
+#naam::before{
     content: "";
     position: absolute;
     left: 0;
@@ -41,28 +31,42 @@ body {
     height: 3px;
     width: 30px;
     border-radius: 5px;
-    background: linear-gradient(135deg,#E975A8, #726CF8 );
+    background: linear-gradient(135deg, #E975A8, #726CF8);
 }
 
-.content form .user-details {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 20px 0 12px 0;
+.input-box{
+    margin: 8px ;
+    box-sizing: border-box;
 }
 
-form .user-details .input-box {
+.user-details input{
     margin-bottom: 15px;
-    width: calc(100% / 2 - 20px);
+    width: 50%;
 }
 
-form .input-box span.details {
+.user-details1 .input-box input{
+    margin-bottom: 15px;
+    width: 50%;
+}
+
+.user-details1 {
+    display:flex;
+    flex-direction: column;
+}
+
+.user-details1 .checkbox, .user-details1 .pass-link {
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+span.details{
     display: block;
     font-weight: 500;
+    font-weight: bolder;
     margin-bottom: 5px;
 }
 
-.user-details .input-box input {
+.input-box .user-details{
     height: 45px;
     width: 100%;
     outline: none;
@@ -123,23 +127,21 @@ form .button {
     margin: 35px 0;
 }
 
-
 form .button input {
     height: 100%;
     width: 100%;
     border-radius: 5px;
     border: none;
-    color: #fff;
     font-size: 18px;
     font-weight: 500;
     letter-spacing: 1px;
     cursor: pointer;
     transition: all 0.3s ease;
-    background: linear-gradient(135deg,#E975A8, #726CF8);
+    background: linear-gradient(135deg, #E975A8, #726CF8);
 }
 
 form .button input:hover {
-    background: linear-gradient(-135deg,#E975A8, #726CF8);
+    background: linear-gradient(-135deg, #E975A8, #726CF8);
 }
 
 form .content .checkbox {
@@ -152,8 +154,7 @@ form .content .pass-link {
     display: flex;
     align-items: center;
     justify-content: right;
-    background: linear-gradient(135deg,#E975A8, #726CF8);
-
+    background: linear-gradient(135deg, #E975A8, #726CF8);
 }
 
 @media(max-width: 584px) {
@@ -200,13 +201,101 @@ form .login-link a:hover {
     text-decoration: underline;
 }
 
-
-
 @media(max-width: 459px) {
     .container .content .category {
         flex-direction: column;
     }
-    
+
 }
 
+#dabba2 {
+    background-color: #fff;
+}
 
+#naam2 {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+#naam2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #E975A8, #726CF8);
+}
+
+#dabba3 {
+    background-color: #fff;
+}
+
+#naam3 {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+#naam3::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #E975A8, #726CF8);
+}
+#dabba4 {
+    background-color: #fff;
+}
+
+#naam4 {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+#naam4::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #E975A8, #726CF8);
+}
+#dabba5 {
+    background-color: #fff;
+}
+
+#naam5 {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+#naam5::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #E975A8, #726CF8);
+}
+#reset{
+    display: flex;
+}
+
+.users{
+    display: flex;
+    margin: 5px;
+    padding: auto;
+    gap: 20rem;
+}

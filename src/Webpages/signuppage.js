@@ -63,8 +63,8 @@ function SignUp(){
 
     return(
         <div className='parent'>
-            <div className="container" style={{width:"800px"}}>
-                <div className="title">SIGN UP</div>
+            <div className="container" id = "dabba">
+                <div className="title" id = "naam">SIGN UP</div>
                 <div className="content">
                     <form method='POST'/>
                         <div className="user-details" >
@@ -118,7 +118,7 @@ function SignUp(){
                             <input type="radio" name="gender" /> Prefer Not To Say	
 
                         </div>
-                        <div className="button">
+                        <div className="button" id = "button">
                             <input type="submit" name="signup" value="SignUp"
                             onClick={PostData}
                             />

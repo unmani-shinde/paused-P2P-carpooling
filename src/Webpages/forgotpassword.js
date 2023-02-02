@@ -5,9 +5,9 @@ function ForgotPassword(){
 
     let navigate=useNavigate();
     return(
-
-        <div className="container" style={{width:"800px"}}>
-            <div className="title">Forgot Password</div>
+        <div className="parent">
+        <div className="container" id="dabba5">
+            <div className="title" id="naam5">Forgot Password</div>
             <div className="content">
                 <form>
                     <div className="user-details">
@@ -22,6 +22,7 @@ function ForgotPassword(){
                     </div>
                 </form>
             </div>
+        </div>
         </div>
     )
 }

@@ -6,9 +6,9 @@ import { useNavigate } from 'react-router-dom';
 function OTP(){
     let navigate=useNavigate();
     return(
-
-        <div className="container" style={{width:"880px"}}>
-            <div className="title">Enter OTP</div>
+         <div className="parent">
+        <div className="container" id="dabba4" >
+            <div className="title" id="naam4">Enter OTP</div>
             <div className="content">
                 <form action="">
                     <div className="user-details">
@@ -23,6 +23,7 @@ function OTP(){
                     </div>
                 </form>
             </div>
+        </div>
         </div>
         )
     }

@@ -42,12 +42,13 @@ function SignIn(){
 
 
     return(
-
-        <div className="container">
-            <div className="title">Login Form</div>
+        <div className="parent">
+        <div className="container" id = "dabba2">
+            <div className="title" id = "naam2">Login Form</div>
             <div className="content">
                 <form method='POST'>
-                    <div className="user-details">
+                    <div className="user-details1">
+                        <div className="users1">
                         <div className="input-box">
                             <span className="details">User Name</span>
                             <input type="text" placeholder="User Name" required="required"
@@ -63,11 +64,12 @@ function SignIn(){
                             onChange={(e)=> setPassword(e.target.value)}
                             />
                         </div>
+                        </div>
                 
                         <div className="checkbox">
                             <span className="details"></span>
                             <input type="checkbox" id="remember-me"/>
-                            <label for="remember-me">Remember me</label>
+                            <label for="remember-me">{'\u00A0'}Remember me</label>
                         </div>   
                         <div className="pass-link">
                             <a href='/forgotpassword' onClick={()=>navigate("/forgotpassword")}>Forgot Password?</a>
@@ -86,6 +88,7 @@ function SignIn(){
                     </div>
                 </form>
             </div>
+        </div>
         </div>
     )
 }

@@ -5,13 +5,12 @@ import { useNavigate } from 'react-router-dom';
 function ResetPassword(){
     let navigate=useNavigate();
     return(
-
-
-        <div className="container" style={{width:"880px"}}>
-            <div className="title">Reset Password</div>
+        <div className="parent">
+        <div className="container" id="dabba3">
+            <div className="title" id="naam3">Reset Password</div>
             <div className="content">
                 <form action="">
-                    <div className="user-details">
+                    <div className="user-details2" id="reset">
                         <div className="input-box" style={{margin:"auto",textAlign:"center",fontSize: "larger"}}>
                             <span className="details">Enter New Password</span>
                             <input type="password" placeholder="New Password" required/>
@@ -26,6 +25,7 @@ function ResetPassword(){
                     </div>
                 </form>
             </div>
+        </div>
         </div>
         )
     }
