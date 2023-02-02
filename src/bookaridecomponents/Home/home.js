@@ -2,6 +2,11 @@ import React,{ useState,useEffect} from 'react';
 import './home.css'
 import axios from 'axios';
 
+// import Web3 from 'web3';
+ 
+// const Carpooling = require('../../assets/Carpooling.json'); // Contract ABI
+// const web3 = new Web3(window.ethereum);
+// const contract = new Web3.eth.Contract(Carpooling.abi, Carpooling.address);
 
 const Home =()=>{
     const [UserLocation,SetUserLocation]=useState({
@@ -17,73 +22,55 @@ const Home =()=>{
         SetUserLocation({...UserLocation,[name]:value})
     }
 
+    const [latitude,setLatitude]=useState("");
+    const [longitude,setLongitude]=useState("");
 
-    // const [latitude,setLatitude]=useState("");
-    // const [longitude,setLongitude]=useState("");
+    const [response, setResponse] = useState('');
+    ;
 
+    // const [origin, setOrigin] = useState('');
+    // const [destination, setDestination] = useState('');
+    // const [rideId, setRideId] = useState(0);
+    
     useEffect(()=>{
         navigator.geolocation.getCurrentPosition((position)=>{
-        //     console.log(position.coords)
-        //     setLatitude(position.coords.Latitude);
-        //     setLongitude(position.coords.Longitude);
+            console.log(position.coords)
+            setLatitude(position.coords.Latitude);
+            setLongitude(position.coords.Longitude);
         })
-        const RAPIDAPI_KEY='e7d7614529mshf3b0e6977befcc6p13700fjsn7c359e421cda'
-
-        const GEOLOCATION_URL='https://forward-reverse-geocoding.p.rapidapi.com/v1/reverse?lat=41.8755616&lon=-87.6244212&accept-language=en&polygon_threshold=0.0'
-
-        const GEOLOCATION_HOST='forward-reverse-geocoding.p.rapidapi.com'
-
-        const TAXIFARE_URL="https://taxi-fare-calculator.p.rapidapi.com/search-geo"
-
-        const TAXIFARE_HOST="taxi-fare-calculator.p.rapidapi.com"
-
-
-
-       const getData= async(url,host)=>{
-        const response= await fetch(url,{
-            method:"GET",
-            headers:{
-                "Content-Type":"application/json",
-                'X-RapidAPI-Key': RAPIDAPI_KEY,
-                'X-RapidAPI-Host': host,
-            },
-            
-            
-            
-
-        });
-
-        if(!response.ok){
-            throw new Error(`HTTP error! status:${response.status}`);
-        }
-        console.log(typeof response)
-        console.log(response)
-        
-        JSON.parse(response.data)
-        return await response.json();
-
-       };
-
-       const runApiQueries=async()=>{
-        //GET COORDINATES USING NAME OF PLACE
-        const geoData=await getData(GEOLOCATION_URL,GEOLOCATION_HOST)
-        console.log(geoData);
-        //GET THE TAXIFARE BASED ON DISTANCE
-        const FareData= await getData(
-            TAXIFARE_URL + geoData.journey.fare,
-            TAXIFARE_HOST
-
-        );
-        console.log(FareData);
-
-       }
-
-       runApiQueries();
-
-
-
-
   },[])
+
+//   const bookRide = async () => {
+//     const accounts = await web3.eth.getAccounts();
+//     contract.methods.bookRide(rideId).send({ from: accounts[0] });
+//   };
+
+const API=async()=>{
+
+    const options = {
+        method: 'GET',
+        url: 'https://taxi-fare-calculator.p.rapidapi.com/search-geo',
+        params: {dep_lat: '19.1176', dep_lng: '72.9060', arr_lat: '19.1193', arr_lng: '72.9116'},
+        headers: {
+            'X-RapidAPI-Key': 'e7d7614529mshf3b0e6977befcc6p13700fjsn7c359e421cda',
+            'X-RapidAPI-Host': 'taxi-fare-calculator.p.rapidapi.com',
+            'Content-Type':'application/json',
+            'Access-Control-Allow-Origin':'*'
+        }
+        };
+    
+        axios.request(options).then(function (response) {
+            console.log(response.data);
+            console.log(typeof response.data.journey)
+            let finalfare=response.data.journey.fares[0].price_in_cents
+            console.log(finalfare)
+            setResponse(response.data.journey.fares[0].price_in_cents);
+    
+        }).catch(function (error) {
+            console.error(error);
+        });
+}
+
 
 
     return(
@@ -120,16 +107,21 @@ const Home =()=>{
                     </div>
 
                     <div className="locationDiv">
-                        <label htmlFor='price'>Charges</label>
-                        <input type="text" placeholder='$3/Meters'/>
+                        <label htmlFor='price'>Charges(in Rs.)</label>
+                        <input type="text" placeholder={response}/>
                     </div>
-                    <btn className='btn'>
+                    <btn className='btn' onClick={API}>
                         Search
 
                     </btn>
+                    <btn className='btn'>
+                        BookNow!
+                    </btn>
+                    
 
 
                 </div>
+                
 
 
 

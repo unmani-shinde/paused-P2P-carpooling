@@ -7,6 +7,7 @@ import ForgotPassword from './Webpages/forgotpassword';
 import OTP from './Webpages/otp';
 import ResetPassword from './Webpages/resetpassword';
 import BookARide from './Webpages/BookARide';
+import RideBooked from './Webpages/RideBooked';
 
 
 function App() {
@@ -21,6 +22,8 @@ function App() {
     <Route path='/resetpassword' element={<ResetPassword/>}/>
     <Route path='/BookARide' element={<BookARide/>}/>
     <Route path='/PublishARide' element={<BookARide/>}/>
+    <Route path='/RideBooked' element={<RideBooked/>}/>
+
 
     </Routes>
     

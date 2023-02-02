@@ -32,17 +32,27 @@ function SignUp(){
 
     const PostData= async(e)=>{
         e.preventDefault();        
-        const {Fullname,Username,email,phonenumber,password,cpassword}= user;
+        // const {Fullname,Username,email,phonenumber,password,cpassword}= user;
+        let myuser=JSON.stringify(user)
 
-        const res  =await fetch("/signup",{
+        const res  =await fetch("http://localhost:4000/signup",{
             method:"POST",
+            mode:"cors",
             headers:{
-                "Content-Type":"application/json"
+                "Content-Type":"application/json",
+                
+                "Access-Control-Allow-Origin":  "http://localhost:4000",
+                "Access-Control-Allow-Methods": "POST",
+                "Access-Control-Allow-Headers": "Content-Type, Authorization"
+                
+                
             },
-            body:JSON.stringify({
-                Fullname,Username,email,phonenumber,password,cpassword
-            })
+            
+            
+            body:myuser
+            
         })
+               
 
         const data = await res.json();
 
@@ -59,12 +69,12 @@ function SignUp(){
 
 
 
-    }
+}
 
     return(
         <div className='parent'>
-            <div className="container" style={{width:"800px"}}>
-                <div className="title">SIGN UP</div>
+            <div className="container" id = "dabba">
+                <div className="title" id = "naam">SIGN UP</div>
                 <div className="content">
                     <form method='POST'/>
                         <div className="user-details" >
@@ -118,7 +128,7 @@ function SignUp(){
                             <input type="radio" name="gender" /> Prefer Not To Say	
 
                         </div>
-                        <div className="button">
+                        <div className="button" id = "button">
                             <input type="submit" name="signup" value="SignUp"
                             onClick={PostData}
                             />
@@ -138,11 +148,14 @@ function SignUp(){
             
 
         </div>
+
         
         
 
-        )
+    )
     }
+
+
 
 
             
