@@ -1,0 +1,48 @@
+.about .secContainer{
+    background: linear-gradient(to top, rgba(0,0,0,0.76),rgba(0,0,0,0.69)) ;
+    margin-top: 2rem;
+
+}
+
+.about .secContainer .videocard .cardContent{
+    gap:2rem;
+    padding: 2rem 1rem;
+}
+
+.about .secContainer .videocard .cardContent .cardText h2{
+    color:white;
+    font-weight: 600;
+    padding-bottom: 1rem;
+
+}
+
+.about .secContainer .videocard .cardContent .cardText p{
+    color:white;
+    opacity: .7;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.about .secContainer .videocard .cardContent .cardText h4{
+    color:white;
+    font-weight: 600;
+    padding-top: 2rem;
+    font-size: 20px;
+
+}
+
+.about .secContainer .videocard .cardContent .cardVideo{
+    border: 2px solid white;
+    height: 500px;
+    width:100%;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+.about .secContainer .videocard .cardContent .cardVideo video{
+    height: 100%;
+    width:100%;
+    object-fit: cover;
+}
