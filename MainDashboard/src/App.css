@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+
+
+/************ Default Css ************/
+* {
+    margin     : 0;
+    padding    : 0;
+    box-sizing : border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  html {
+    scroll-behavior   : smooth;
+    scroll-padding-top: 75px;
+  }
+  
+  body {
+    font-weight     : 400;
+    overflow-x      : hidden;
+    position        : relative;
+    background-color:#F1EEE5;
+    font-family     : 'Centra', sans-serif;
+    width           : 100vw;
+  }
+  
+  #home span {
+    color: white;
+  }
+  
+  .footer h3 {
+    color: black
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color      : white;
+    margin     : 0;
+    padding    : 0;
+    line-height: normal;
+  }
+  
+  p,
+  a,
+  li,
+  button,
+  ul {
+    margin         : 0;
+    padding        : 0;
+    line-height    : normal;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+  
+  img {
+    width : 100%;
+    height: auto;
+  }
+  
+  button {
+    border          : 0;
+    background-color: transparent;
+  }
+  
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: none;
+  }
+  
+  @media (min-width:1700px) {
+    main .container {
+      max-width: 100%;
+      padding  : 0 150px;
+    }
+  }
+  
+  p.success {
+    color: green;
+  }
+  
+  p.danger {
+    color: red;
+  }
+
+.MyNavbar{
+    padding   : 18px 0;
+    color     : black;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: white;
+    position  : fixed;
+    width     : 100%;
+    top       : 0;
+    z-index   : 9999;
+    transition: 0.32s ease-in-out;
+    display: flex;
+    gap: 50px;
+
+}
+
+.MyNavbar a{
+    color: #116D6E;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 39px;
+    font-family: 'Inter', sans-serif;
+    font-size: 19px;
+    padding: 5px;
+}
+
+
+.MyNavbar a:hover {
+    background-color:#C4DFDF;
+    color:black;
+  }
+
+.StartRide{
+  background-color: #C4DFDF;
+  border-radius: 20px;
+}
+
+
+.MyNavbar h3{
+  color:black;
+  font-weight: bold;
+  font-size: 30px;
+  font-family: 'Inter', sans-serif;
+  margin-left: 15px;
+  margin-top: 5px;
+}
+
+.heading{
+  font-weight: bold;
+  font-size: 30px;
+  font-family: 'Inter', sans-serif;
+  color: black;
+  margin-top: 100px;
+  margin-left:600px
+
+}
+
+.profilesec{
+  margin-top: 60px;
+  gap:30px;
+  display: flex;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  background-color: white;
+  border-radius: 20px;
+  width: 700px;
+  height: 250px;
+  margin-left: 100px;
+  padding-top: 60px;
+  padding-left: 160px;
+}
+
+.UserDetails{
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  margin-left: 100px;
+  margin-top: -20px;
+}
+
+.profilephotu{
+  background-color: grey;
+  margin-left: -100px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+
+}
+
+.greenbox{
+  background-color: #116D6E;
+  margin-left: 100px;
+  margin-top:40px;
+  width: 1260px;
+  height: 150px;
+  color: white;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  border-radius: 10px;
+  
+}
+
+.walletwagera {
+  background-color: white;
+  border-radius: 10px;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+  padding-left: 20px;
+  padding-top: 20px;
+  font-size: 20px;
+  margin-top: 60px;
+  margin-left: 60px;
+  width: 500px;
+  height: 100px;
+}
+
+.RewardReferral{
+  background-color: white;
+  border-radius: 10px;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+  padding-left: 20px;
+  padding-top: 20px;
+  font-size: 20px;
+  margin-top: 40px;
+  margin-left: -18px;
+  width: 500px;
+  height: 100px;
+}
+
+.AllinAll{
+  display: flex;
+}
+
+.RideHistory{
+  margin-top: 150px;
+  display: flex;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  width: 800px;
+  margin-left: 50px;
+  gap:80px;
+}
+
+.ridebtn{
+  background-color: #116D6E;
+  color:white;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  padding: 5px 5px 5px 5px;
+  border-radius: 5px;
+  margin-left: 480px;
+}
+
+
+ .R1{
+  margin-top: 25px;
+  padding-left: 20px;
+  background-color:white;
+  width: 650px;
+  height: 50px;
+  margin-left: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 25px;
+  padding-top: 12px;
+}
+
+.PeersOnRide{
+  margin-top: 100px;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  margin-left: 50px;
+}
+
+.MainRider{
+  background-color: white;
+  width: 400px;
+  height: 150px;
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+.OtherPeopleRide{
+  background-color: white;
+  width: 400px;
+  margin-top: 20px;
+  height: 300px;
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+
+.Hostbtn{
+  background-color: #116D6E;
+  color:white;
+  font-family: 'Inter', sans-serif;
+  font-size: 25px;
+  padding: 10px 10px 10px 10px;
+  border-radius: 5px;
+  margin-left: 45px;
+}
+
+.HOSTID{
+  margin-top: 30px;
+  
+}
+
+.TrackCarpool{
+  margin-top: 100px;
+  margin-left:20px;
+  background-color: white;
+  font-family: 'Inter', sans-serif;
+  border-radius: 10px;
+  width: 600px;
+}
+
+.outercover{
+  display: flex;
+  font-family: 'Inter', sans-serif;
+}
+
+.AbsoluteRight{
+  margin-top: 100px;
+  font-family: 'Inter', sans-serif;
+}
+
+.RideUpdate{
+  background-color: white;
+  margin-left: 15px;
+  width: 430px;
+  font-family: 'Inter', sans-serif;
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-top: 15px;
+  height: 250px;
+}
+
+.TravelTime{
+  background-color: white;
+  margin-left: 15px;
+  margin-top: 10px;
+  width: 430px;
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  padding-left: 20px;
+  padding-top: 15px;
+  height: 100px;
+}
+
+.EstimatedArrival{
+  background-color: white;
+  margin-left: 15px;
+  margin-top: 10px;
+  width: 430px;
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  padding-left: 20px;
+  padding-top: 15px;
+  height: 100px;
+}
