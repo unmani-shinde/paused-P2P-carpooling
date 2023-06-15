@@ -1,18 +1,17 @@
 {
-  "name": "map-geocode",
+  "name": "leaflet-map",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
-    "@mui/material": "^5.13.4",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "leaflet": "^1.9.4",
+    "leaflet": "^1.9.1",
+    "leaflet-control-geocoder": "^2.4.0",
+    "leaflet-routing-machine": "^3.2.12",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-leaflet": "^4.2.1",
+    "react-leaflet": "^4.1.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
