@@ -1,0 +1,167 @@
+@import url("~leaflet/dist/leaflet.css");
+.leaflet-container {
+  width: 100%;
+  height: 100vh;
+}
+
+
+.MyNavbar{
+  padding   : 18px 0;
+  color     : black;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: white;
+  position  : fixed;
+  width     : 100%;
+  top       : 0;
+  z-index   : 9999;
+  transition: 0.32s ease-in-out;
+  display: flex;
+  gap: 50px;
+
+}
+
+.MyNavbar a{
+  color: #116D6E;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 39px;
+  font-family: 'Inter', sans-serif;
+  font-size: 19px;
+  padding: 5px;
+}
+
+
+.MyNavbar a:hover {
+  background-color:#C4DFDF;
+  color:black;
+}
+
+.StartRide{
+background-color: #C4DFDF;
+border-radius: 20px;
+}
+
+
+.MyNavbar h3{
+color:black;
+font-weight: bold;
+font-size: 30px;
+font-family: 'Inter', sans-serif;
+margin-left: 15px;
+margin-top: 5px;
+}
+/* CheckRides CSS */
+
+
+
+
+
+.searchridebtn{
+  background-color: #116D6E;
+  color:white;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  padding: 5px 5px 5px 5px;
+  border-radius: 5px;
+  margin-left: 120px;
+  margin-top: 25px;
+  width: 100px;
+  height: 50px;
+}
+
+.searchridebtn:hover {
+  background-color: #0C4A4C;
+}
+
+.avaridebtn{
+  background-color: #116D6E;
+  color:white;
+  font-family: "Poppins";
+  font-size: 25px;
+  padding: 7px 7px 7px 7px;
+  border-radius: 5px;
+  margin-left: 1180px;
+  margin-top: 1.5px;
+  width: 100px;
+  height: 60px;
+}
+
+.avaridebtn:hover {
+  background-color: #0C4A4C;
+}
+
+.UpperBlock .From input{
+  margin-top: 25px;
+  padding-left: 20px;
+  background-color:white;
+  width: 350px;
+  height: 40px;
+  margin-left: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 25px;
+  padding-top: 12px;
+}
+.UpperBlock .From input:focus {
+  outline: none;
+  border: 2px solid #116D6E;
+  box-shadow: 0 0 5px rgba(17, 109, 110, 0.5);
+}
+
+.UpperBlock .To input{
+  margin-top: 25px;
+  padding-left: 20px;
+  background-color:white;
+  width: 350px;
+  height: 40px;
+  margin-left: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 25px;
+  padding-top: 12px;
+}
+
+.UpperBlock .To input:focus {
+  outline: none;
+  border: 2px solid #116D6E;
+  box-shadow: 0 0 5px rgba(17, 109, 110, 0.5);
+}
+
+.R1{
+  margin-top: 25px;
+  padding-left: 20px;
+  background-color:white;
+  width: 1350px;
+  height: 40px;
+  margin-left: 100px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 25px;
+  padding-top: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+}
+
+.R1:hover {
+  background-color: #F5F5F5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.AvailableRides{
+  margin-top: 45px;
+  font-family:"poppins";
+  font-size: 30px;
+  font-weight: bold;
+  background-color:#F1EEE5;
+  border:3px solid black;
+  position: relative;
+  z-index: 1;
+
+}
+
+.AvailableRides p{
+  font-family: "Poppins";
+  border-radius: 5px;
+  padding-left: 20px;
+  width:450px;
+  
+}
