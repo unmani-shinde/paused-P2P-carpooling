@@ -1,0 +1,59 @@
+{
+  "name": "blockchain-commute-io",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@cloudinary/react": "^1.11.2",
+    "@cloudinary/url-gen": "^1.10.1",
+    "@fortawesome/fontawesome-free": "^6.4.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.4.0",
+    "bootstrap": "^5.3.0",
+    "firebase": "^9.19.1",
+    "framer-motion": "^10.12.2",
+    "leaflet": "^1.9.4",
+    "leaflet-control-geocoder": "^2.4.0",
+    "leaflet-routing-machine": "^3.2.12",
+    "react": "^18.2.0",
+    "react-avatar-editor": "^13.0.0",
+    "react-bootstrap": "^2.7.4",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.9.0",
+    "react-image-crop": "^10.1.5",
+    "react-leaflet": "^4.2.1",
+    "react-rating-stars-component": "^2.2.0",
+    "react-redux": "^8.1.0",
+    "react-router-dom": "^5.3.4",
+    "react-scripts": "5.0.1",
+    "redux": "^4.2.1",
+    "web-vitals": "^2.1.4",
+    "web3": "^1.9.0",
+    "web3.storage": "^4.5.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
