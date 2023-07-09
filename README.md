@@ -78,13 +78,16 @@ Add any more links/resources you used for your project
 #### File Structure
 ```
 📦master
- ┣ 📂backend
- ┃ ┗ 📂models                                 # Contains schema for MongoDB collection named User (User.js)
- ┃ ┗ 📂routes                                 # Contains Auth.js for POST requests from backend to database
- ┃ ┗ 📜.gitignore               
- ┃ ┗ 📜db.js                                  #Connects node.js to MongoDB
- ┃ ┗ 📜index.js                               #Parent File
- ┃ ┗ 📜package.json                           #Dependencies are listed                             
+ ┣ 📂server
+ ┃ ┗ 📂Schema
+ ┃ ┃  ┗ 📜 ChatModel.js
+ ┃ ┃  ┗ 📜 MessageModel.js                               
+ ┃ ┗ 📂Routes 
+ ┃ ┃  ┗ 📜 auth.js
+ ┃ ┃  ┗ 📜 ChatRoute.js                                
+ ┃ ┗ 📜db.js                                  
+ ┃ ┗ 📜index.js                             
+ ┃ ┗ 📜package.json                                                      
  ┃ ┗ 📜package-lock.json
  ┣ 📂public
  ┣ 📂src                          
@@ -92,35 +95,92 @@ Add any more links/resources you used for your project
  ┃ ┃ ┗ 📂font
  ┃ ┃ ┗ 📂Images
  ┃ ┃ ┗ 📂img  
- ┃ ┗ 📂bookaridecomponents                    # React Components utilised in the Book & Publish a Ride pages 
- ┃ ┃ ┗ 📂About
- ┃ ┃ ┗ 📂Home
- ┃ ┃ ┗ 📂NavBar
- ┃ ┃ ┗ 📂Popular
- ┃ ┃ ┗ 📂Publish
- ┃ ┗ 📂components                             # React Components utilised in the Home page
- ┃ ┃ ┗ 📜Banner.js 
- ┃ ┃ ┗ 📜NavBar.js 
- ┃ ┃ ┗ 📜Contact.js  
- ┃ ┃ ┗ 📜Footer.js 
- ┃ ┃ ┗ 📜Projects.js   
- ┃ ┗ 📂contracts                            # Contains the Smart Contract for Carpooling
- ┃ ┃ ┗ 📜carpool-contract.sol 
- ┃ ┗ 📂Webpages                             # Contains the WebPages for Login & Sign Up Pages
- ┃ ┃ ┗ 📜BookARide.css
- ┃ ┃ ┗ 📜BookARide.js
- ┃ ┃ ┗ 📜forgotpassword.js
- ┃ ┃ ┗ 📜otp.js
- ┃ ┃ ┗ 📜resetpassword.js 
- ┃ ┃ ┗ 📜RideBooked.js 
- ┃ ┃ ┗ 📜signinpage.js
- ┃ ┃ ┗ 📜signuppage.js
- ┃ ┃ ┗ 📜style.css  
+ ┃ ┗ 📂reducers                    
+ ┃ ┃ ┗ 📜allarrayReducer.js
+ ┃ ┃ ┗ 📜rootReducer.js
+ ┃ ┗ 📂components                             
+ ┃ ┃ ┗ 📂ABI
+ ┃ ┃ ┃  ┗ 📜contracttestingABI.json
+ ┃ ┃ ┗ 📂actions
+ ┃ ┃ ┃  ┗ 📜actions.js
+ ┃ ┃ ┃  ┗ 📜allarrayActions.js
+ ┃ ┃ ┃  ┗ 📜destinationAddressActions.js
+ ┃ ┃ ┃  ┗ 📜sourceAddressActions.js
+ ┃ ┃ ┗ 📂homepagecomponents
+ ┃ ┃ ┃  ┗ 📜Banner.js
+ ┃ ┃ ┃  ┗ 📜Contact.js
+ ┃ ┃ ┃  ┗ 📜Footer.js
+ ┃ ┃ ┃  ┗ 📜MailchimpForm.js
+ ┃ ┃ ┃  ┗ 📜NavBar.js
+ ┃ ┃ ┃  ┗ 📜NavBar2.js
+ ┃ ┃ ┃  ┗ 📜Newsletter.js
+ ┃ ┃ ┃  ┗ 📜ProjectCard.js
+ ┃ ┃ ┃  ┗ 📜Projects.js
+ ┃ ┃ ┃  ┗ 📜Skills.js
+ ┃ ┃ ┗ 📂images
+ ┃ ┃ ┗ 📂javascripts
+ ┃ ┃ ┃  ┗ 📜administrator-dashboard-enrolled-passengers.jsx
+ ┃ ┃ ┃  ┗ 📜administrator-dashboard-requests.jsx
+ ┃ ┃ ┃  ┗ 📜API.jsx
+ ┃ ┃ ┃  ┗ 📜axiosAPI.jsx
+ ┃ ┃ ┃  ┗ 📜Chat.jsx
+ ┃ ┃ ┃  ┗ 📜contracttesting.jsx
+ ┃ ┃ ┃  ┗ 📜CurrentRide.jsx
+ ┃ ┃ ┃  ┗ 📜CurrentRides.jsx
+ ┃ ┃ ┃  ┗ 📜dashboard-landing.jsx
+ ┃ ┃ ┃  ┗ 📜History.jsx
+ ┃ ┃ ┃  ┗ 📜HomePageFinal.jsx
+ ┃ ┃ ┃  ┗ 📜LoginPage.jsx
+ ┃ ┃ ┃  ┗ 📜Metamask.jsx
+ ┃ ┃ ┃  ┗ 📜Modal.jsx
+ ┃ ┃ ┃  ┗ 📜my-current-rides-booked.jsx
+ ┃ ┃ ┃  ┗ 📜Navbar.jsx
+ ┃ ┃ ┃  ┗ 📜RideHistory.jsx
+ ┃ ┃ ┃  ┗ 📜RideInbox.jsx
+ ┃ ┃ ┃  ┗ 📜SignUpPage.jsx
+ ┃ ┃ ┃  ┗ 📜TopSection.jsx
+ ┃ ┃ ┃  ┗ 📜user-application-status.jsx
+ ┃ ┃ ┃  ┗ 📜user-registration.jsx
+ ┃ ┃ ┃  ┗ 📜view-selected-upcoming-ride.jsx
+ ┃ ┃ ┗ 📂stylesheets
+ ┃ ┃ ┃  ┗ 📜administrator-dashboard-requests.css
+ ┃ ┃ ┃  ┗ 📜HomePage.css
+ ┃ ┃ ┃  ┗ 📜axiosAPI.css
+ ┃ ┃ ┃  ┗ 📜LoginPage.css
+ ┃ ┃ ┃  ┗ 📜contracttesting.css
+ ┃ ┃ ┃  ┗ 📜Metamask.css
+ ┃ ┃ ┃  ┗ 📜SignUpPage.css
+ ┃ ┃ ┃  ┗ 📜UserDashboard.css
+ ┃ ┃ ┗ 📂supplementary-components
+ ┃ ┃ ┃  ┗ 📜pfp-test.jsx
+ ┃ ┃ ┃  ┗ 📜pfptest2.jsx
+ ┃ ┃ ┃  ┗ 📜test-book-a-ride.jsx
+ ┃ ┃ ┃  ┗ 📜testing-map-and-start-a-ride.jsx
+ ┃ ┃ ┗ 📂testing-javascripts
+ ┃ ┃ ┃  ┗ 📂actions
+ ┃ ┃ ┃ ┃  ┗ 📜allarrayActions.js
+ ┃ ┃ ┃ ┃  ┗ 📜setDestinationActions.js
+ ┃ ┃ ┃ ┃  ┗ 📜setSourceActions.js
+ ┃ ┃ ┃ ┃  ┗ 📜setStopsActions.js
+ ┃ ┃ ┃  ┗ 📂reducers
+ ┃ ┃ ┃ ┃  ┗ 📜allarrayReducer.js
+ ┃ ┃ ┃ ┃  ┗ 📜destinationAddressReducer.js
+ ┃ ┃ ┃ ┃  ┗ 📜mainMapRootReducer.js
+ ┃ ┃ ┃ ┃  ┗ 📜sourceAddressReducer.js
+ ┃ ┃ ┃ ┃  ┗ 📜stopsReducer.js
+ ┃ ┃ ┃  ┗ 📜Dashboard.jsx
+ ┃ ┃ ┃  ┗ 📜LeafletGeocoder.jsx
+ ┃ ┃ ┃  ┗ 📜Login.jsx
+ ┃ ┃ ┃  ┗ 📜mainMap.jsx
+ ┃ ┃ ┃  ┗ 📜profile-picture-editor.jsx
+ ┃ ┃ ┃  ┗ 📜StartARidePage.jsx
+ ┃ ┃ ┃  ┗ 📜view-all-rides.jsx
  ┃ ┗ 📜App.css             
  ┃ ┗ 📜App.js                               # Main file             
  ┃ ┗ 📜App.test.js            
  ┃ ┗ 📜index.css           
- ┃ ┗ 📜index.js                             # Renders App.js      
+ ┃ ┗ 📜index.js                              # Renders App.js      
+ ┃ ┗ 📜firebase-config.js                         
  ┃ ┗ 📜logo.svg                 
  ┣ 📜README.md                              
  ┗ 📜package.xml
@@ -202,7 +262,6 @@ Execute the backend by running the command:
 - [Unmani Shinde - ](https://github.com/unmani-shinde) [EMail](usShinde_b21@el.vjti.ac.in) :e-mail:
 - [Soham Lad - ](https://github.com/Sohamlad2003) [EMail](ssLad_b21@el.vjti.ac.in) :e-mail:
 - [Aishwarya Ravi - ](https://github.com/AishwaryaRavi07) [EMail](aravi_b21@el.vjti.ac.in) :e-mail:
-- [Paras Pandita - ](https://github.com/ParasPandita1) [EMail](ppandita_b21@el.vjti.ac.in) :e-mail:
 
 
 ## 👨‍🏫Mentors
@@ -211,9 +270,6 @@ Execute the backend by running the command:
 - [Ketaki Deshmukh - ](https://github.com/KetakiMDeshmukh) [EMail](kmdeshmukh_b20@ce.vjti.ac.in) :e-mail: 
 
 ## 📱Screenshots
-* [HomePage](https://drive.google.com/file/d/13_UGpVWltsI47RALYh1TeP4j9FLluAib/view?usp=sharing)
-* [SignUp and Login](https://drive.google.com/file/d/1NrJKBQOLNzjvoR-u0Oq_1H445qAb1OjX/view?usp=sharing)
-* [BookARide](https://drive.google.com/file/d/1Gvz6XaNCsDRl2nWDk7d73sWsiJft2lRk/view?usp=sharing)
-* [PublishARide](https://drive.google.com/file/d/109EN2ZMG68e3U55w8kdMU4LtT418wbSF/view?usp=sharing)
+
 
 [Main Link](https://drive.google.com/drive/folders/1-4yxv0tFacmeiL3HV4LnqMMpuFB9aEDb?usp=sharing)
