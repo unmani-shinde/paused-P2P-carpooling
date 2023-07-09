@@ -3,12 +3,12 @@
     <img src="https://res.cloudinary.com/dn6vz8exv/image/upload/v1665664791/inh_zzefoy.jpg" alt="CoC Inheritance 2022" width="500" height="166">
   </a>
   <br>
-  P2P Carpooling Using BlockChain Technology
+  P2P Carpooling Using Blockchain Technology
 </h1>
 
 <div align="center">
-   <strong>P2P Carpooling Using Blockchain</strong>P2P Decentralised Carpooling Network -<br>
-  CoC Inheritance 2022 || PAUS-ed <br> <br>
+   <strong>P2P Carpooling Using Blockchain</strong><br> P2P Decentralised Carpooling Network -
+  CoC Inheritance 2022 || Team PAUS-ed <br> <br>
 </div>
 <hr>
 
@@ -26,7 +26,6 @@
 - [Usage](#usage)
 - [Team Members](#team-members)
 - [Mentors](#mentors)
-- [Screenshots](#screenshots)
 
 </details>
 
@@ -52,17 +51,18 @@ Add any more links/resources you used for your project
 ## 🤖Tech-Stack
 
 #### Front-end
-- HTML
-- CSS
+- HTML/CSS
 - JavaScript
 - ReactJS
+- LeafletJS [Documentation](https://leafletjs.com/reference.html)
+- ReduxJS [Documentation](https://redux.js.org/introduction/getting-started)
 - web3.js [Documentation](https://web3py.readthedocs.io/en/v5/)
-- ethers.js [Documentation](shttps://docs.ethers.org/v5/)
-
 
 #### Back-end
 - Node.js [Documentation](https://nodejs.org/en/docs/)
 - Express.js [Documentation](https://devdocs.io/express/)
+- web3storage/IPFS [Documentation](https://web3.storage/docs/)
+- socket.io [Documentation](https://socket.io/docs/v4/)
 
 #### Database
 - MongoDB [Documentation](https://www.mongodb.com/docs/)
@@ -74,6 +74,7 @@ Add any more links/resources you used for your project
 #### Additional Softwares
 - Remix IDE [Documentation](https://remix-ide.readthedocs.io/en/latest/)
 - Thunderclient [Documentation](https://thunder-api.readthedocs.io/en/latest/)
+
 
 #### File Structure
 ```
@@ -95,18 +96,18 @@ Add any more links/resources you used for your project
  ┃ ┃ ┗ 📂font
  ┃ ┃ ┗ 📂Images
  ┃ ┃ ┗ 📂img  
- ┃ ┗ 📂reducers                    
+ ┃ ┗ 📂reducers                               #files to determine the response to the change of states of the Provider store                
  ┃ ┃ ┗ 📜allarrayReducer.js
  ┃ ┃ ┗ 📜rootReducer.js
  ┃ ┗ 📂components                             
- ┃ ┃ ┗ 📂ABI
+ ┃ ┃ ┗ 📂ABI                                  #specifications of how to interact with the smart contract deployed on sepolia test network
  ┃ ┃ ┃  ┗ 📜contracttestingABI.json
- ┃ ┃ ┗ 📂actions
+ ┃ ┃ ┗ 📂actions                               #files to change the states of the Provider store
  ┃ ┃ ┃  ┗ 📜actions.js
  ┃ ┃ ┃  ┗ 📜allarrayActions.js
  ┃ ┃ ┃  ┗ 📜destinationAddressActions.js
  ┃ ┃ ┃  ┗ 📜sourceAddressActions.js
- ┃ ┃ ┗ 📂homepagecomponents
+ ┃ ┃ ┗ 📂homepagecomponents                    #components used in designing the homepage
  ┃ ┃ ┃  ┗ 📜Banner.js
  ┃ ┃ ┃  ┗ 📜Contact.js
  ┃ ┃ ┃  ┗ 📜Footer.js
@@ -118,45 +119,26 @@ Add any more links/resources you used for your project
  ┃ ┃ ┃  ┗ 📜Projects.js
  ┃ ┃ ┃  ┗ 📜Skills.js
  ┃ ┃ ┗ 📂images
- ┃ ┃ ┗ 📂javascripts
+ ┃ ┃ ┗ 📂javascripts                                              #components used in the website                     
  ┃ ┃ ┃  ┗ 📜administrator-dashboard-enrolled-passengers.jsx
  ┃ ┃ ┃  ┗ 📜administrator-dashboard-requests.jsx
- ┃ ┃ ┃  ┗ 📜API.jsx
- ┃ ┃ ┃  ┗ 📜axiosAPI.jsx
  ┃ ┃ ┃  ┗ 📜Chat.jsx
- ┃ ┃ ┃  ┗ 📜contracttesting.jsx
  ┃ ┃ ┃  ┗ 📜CurrentRide.jsx
- ┃ ┃ ┃  ┗ 📜CurrentRides.jsx
- ┃ ┃ ┃  ┗ 📜dashboard-landing.jsx
- ┃ ┃ ┃  ┗ 📜History.jsx
  ┃ ┃ ┃  ┗ 📜HomePageFinal.jsx
  ┃ ┃ ┃  ┗ 📜LoginPage.jsx
- ┃ ┃ ┃  ┗ 📜Metamask.jsx
- ┃ ┃ ┃  ┗ 📜Modal.jsx
  ┃ ┃ ┃  ┗ 📜my-current-rides-booked.jsx
- ┃ ┃ ┃  ┗ 📜Navbar.jsx
  ┃ ┃ ┃  ┗ 📜RideHistory.jsx
  ┃ ┃ ┃  ┗ 📜RideInbox.jsx
  ┃ ┃ ┃  ┗ 📜SignUpPage.jsx
  ┃ ┃ ┃  ┗ 📜TopSection.jsx
  ┃ ┃ ┃  ┗ 📜user-application-status.jsx
  ┃ ┃ ┃  ┗ 📜user-registration.jsx
- ┃ ┃ ┃  ┗ 📜view-selected-upcoming-ride.jsx
- ┃ ┃ ┗ 📂stylesheets
+ ┃ ┃ ┗ 📂stylesheets                                              #Styling for all components used
  ┃ ┃ ┃  ┗ 📜administrator-dashboard-requests.css
  ┃ ┃ ┃  ┗ 📜HomePage.css
- ┃ ┃ ┃  ┗ 📜axiosAPI.css
  ┃ ┃ ┃  ┗ 📜LoginPage.css
- ┃ ┃ ┃  ┗ 📜contracttesting.css
- ┃ ┃ ┃  ┗ 📜Metamask.css
- ┃ ┃ ┃  ┗ 📜SignUpPage.css
  ┃ ┃ ┃  ┗ 📜UserDashboard.css
- ┃ ┃ ┗ 📂supplementary-components
- ┃ ┃ ┃  ┗ 📜pfp-test.jsx
- ┃ ┃ ┃  ┗ 📜pfptest2.jsx
- ┃ ┃ ┃  ┗ 📜test-book-a-ride.jsx
- ┃ ┃ ┃  ┗ 📜testing-map-and-start-a-ride.jsx
- ┃ ┃ ┗ 📂testing-javascripts
+ ┃ ┃ ┗ 📂testing-javascripts                                      #components used in the website  
  ┃ ┃ ┃  ┗ 📂actions
  ┃ ┃ ┃ ┃  ┗ 📜allarrayActions.js
  ┃ ┃ ┃ ┃  ┗ 📜setDestinationActions.js
@@ -186,26 +168,6 @@ Add any more links/resources you used for your project
  ┗ 📜package.xml
  
  ```
-
-## 📈Progress
-
-List down all the fully implemented features in your project
- 
-- [x] User Authentication
-- [x] Smart Contracts for Carpooling
-
-List down all the partially implemented features in your project
-
-- [ ] Partial Responsiveness 
-- [ ] Booking & Publishing Rides via Metamask
-- [ ] Explored Chainlink Oracle for External Distance Data Estimation
-
-## 🔮Future Scope
-
-List down all the future plans for the project here
-
-- Real-time tracking of Rides
-- Support & Notification System
 
 ## 💸Applications
 
@@ -260,16 +222,12 @@ Execute the backend by running the command:
 ## 👨‍💻Team Members
 
 - [Unmani Shinde - ](https://github.com/unmani-shinde) [EMail](usShinde_b21@el.vjti.ac.in) :e-mail:
-- [Soham Lad - ](https://github.com/Sohamlad2003) [EMail](ssLad_b21@el.vjti.ac.in) :e-mail:
 - [Aishwarya Ravi - ](https://github.com/AishwaryaRavi07) [EMail](aravi_b21@el.vjti.ac.in) :e-mail:
-
+- [Soham Lad - ](https://github.com/Sohamlad2003) [EMail](ssLad_b21@el.vjti.ac.in) :e-mail:
 
 ## 👨‍🏫Mentors
 
 - [Sarvagnya Purohit - ](https://github.com/saRvaGnyA) [EMail](sarvagnyapurohit@gmail.com) :e-mail: 
 - [Ketaki Deshmukh - ](https://github.com/KetakiMDeshmukh) [EMail](kmdeshmukh_b20@ce.vjti.ac.in) :e-mail: 
 
-## 📱Screenshots
 
-
-[Main Link](https://drive.google.com/drive/folders/1-4yxv0tFacmeiL3HV4LnqMMpuFB9aEDb?usp=sharing)
