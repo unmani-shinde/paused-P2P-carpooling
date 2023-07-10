@@ -1,0 +1,54 @@
+.passenger-container {
+    margin: 20px;
+  }
+  
+  h2 {
+    margin-bottom: 10px;
+    color: #2979ff;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #e1f5fe;
+    color: #2979ff;
+  }
+  
+  button {
+    margin-right: 5px;
+    background-color: #2979ff;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #1565c0;
+  }
+  
+  .passenger-details {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 50%;
+  }
+  
+  .passenger-details h2 {
+    margin-bottom: 10px;
+    color: #2979ff;
+  }
+  
+  .passenger-details p {
+    margin-bottom: 5px;
+  }
+  
