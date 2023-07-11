@@ -11,6 +11,15 @@ button.administrator-dashboard-requests-navbar-buttons{
     margin-top: 3vh;
 }
 
+.carousel-control-prev,
+.carousel-control-next {
+  display: none !important;
+}
+.carousel-indicators {
+    display: none !important;
+  }
+  
+
 /* button.administrator-dashboard-requests-navbar-buttons:hover{
    border-bottom: 4px solid #116D6E;
    

@@ -4,6 +4,12 @@ import CommuteIOABI from '../ABI/contracttestingABI.json';
 import "../stylesheets/administrator-dashboard-requests.css";
 import Modal from 'react-bootstrap/Modal';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { CgProfile } from "react-icons/cg"; 
+import { GiCartwheel } from "react-icons/gi";
+import { IoShieldHalf } from "react-icons/io5";
+import { AiOutlinePaperClip } from "react-icons/ai";
+import Dropdown from 'react-bootstrap/Dropdown';
+import { AiFillCaretDown } from "react-icons/ai";
 import Button from 'react-bootstrap/Button';
 import { style } from '@mui/system';
 import { useHistory } from 'react-router-dom';
@@ -11,6 +17,8 @@ import { useRef } from 'react';
 import { Web3Storage } from 'web3.storage';
 import Carousel from 'react-bootstrap/Carousel';
 import axios from 'axios';
+import imageh from "./image-removebg-preview (14).png";
+import zIndex from '@mui/material/styles/zIndex';
 
 
 const apiKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDQ5NTg0QzFjYjQ1QzczMTQwODQ3RjY2NjBkQ0Y5MzNjODNBM2NFMjAiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2ODY1OTAxNDU4NzEsIm5hbWUiOiJjb21tdXRlLWlvLWZpbGUtdXBsb2FkIn0.1E8NnGBcSwApaWAm6mY6F4I1hZWQKhFDCkeOMYrSp7E';
@@ -56,6 +64,15 @@ function AdministratorDashboardUserRegistration (){
   const [showRegistrationCompletionModal,setShowRegistrationCompletionModal] = useState(false);
   const [flag,setFlag] = useState(true);
   const history = useHistory();
+  const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex) => {
+    setIndex(selectedIndex);
+  };
+
+  const handleNavigationClick = (selectedIndex) => {
+    setIndex(selectedIndex);
+  };
 
 
 
@@ -372,39 +389,41 @@ const loadPassengers = async (contract) => {
       <div className='administrator-dashboard-requests-container' style={{backgroundColor:"#F1EEE5", marginTop:"1vh",marginLeft:"1vw",width:"98vw", height:"98vh", display:"flex", flexDirection:"column", border:"solid 1px black", borderRadius:"20px"}}>
       <div className='administrator-dashboard-requests-navbar' style={{backgroundColor:"#FFFFFF",width:"97.75vw", height:"10vh", display:"flex", flexDirection:"row", textAlign:"center", borderRadius:"20px 20px 0px 0px", paddingLeft:"1vh", paddingTop:"1vh"}}>
           <ul style={{listStyle:"none", display:"flex", flexDirection:"row"}}>
-              <li style={{marginTop:"1vh"}}><button style={{backgroundColor:"transparent",color:"black", fontWeight:"700", fontSize:"40px", marginTop:"-1vh",paddingRight:"10vw",marginBottom:"5vh", height:"5vh"}}>COMMUTE.IO</button></li>
+              <li style={{marginTop:"1vh"}}><button style={{backgroundColor:"transparent",color:"black", fontWeight:"700", fontSize:"40px", marginTop:"-1vh",paddingRight:"10vw",marginBottom:"5vh", height:"5vh"}}><a href='/' style={{border:"none",color:"black"}}>COMMUTE.IO</a></button></li>
           </ul>
       </div><br></br>
-      <h2 style={{fontWeight:"700", fontSize:"xx-large",textAlign:'center',color:'black'}}>COMMUTE.IO VERIFICATION PORTAL</h2>
+      <h2 style={{fontWeight:"700", fontSize:"xx-large",textAlign:'center',color:'black',marginTop:"-4vh"}}>SIGN UP TO USE  COMMUTE.IO</h2>
       <h5 style={{fontWeight:"700",fontSize:"x-large",textAlign:'center',color:'black'}}>We're thrilled to have you here.</h5>
-
-          <Carousel style={{border:"1px solid black", width:"70vw", height:"70vh", alignSelf:"center"}} variant='dark'>
+      <div style={{ display: "flex", flexDirection:'column',justifyContent: "center",alignSelf:'center',width:"81vw"}}>
+        <div style={{ display: "flex", flexDirection:'row',border:"none",backgroundColor:'white',borderRadius:"20px",height:"73vh",boxShadow:"0 4px 8px rgba(0, 0, 0, 0.2)"}}>
+        <Carousel activeIndex={index} onSelect={handleNavigationClick} style={{backgroundColor:'transparent',width:"50vw", height:"60vh", alignSelf:"center",marginTop:"-15vh"}} interval={null}>
             <Carousel.Item >
               <div style={{backgroundColor:" #FEFEFA", display:"flex", flexDirection:"column", height:"65vh", margin:"1vw"}}>
-              <h5 style={{fontWeight:"700" ,marginBottom:"-1vh", paddingTop:"1vh"}}>Tell us more about you.</h5>
+              <h5 style={{fontWeight:"700" ,marginBottom:"1vh", paddingTop:"1vh",color:"black",textAlign:'center'}}>But first, let's get to know you.</h5>
               <table style={{padding:"5vh",marginTop:"-3vh"}}>
               <tbody>
                 <tr style={{height:"15vh"}}>
-                  <td><label style={{paddingLeft:'1vw',fontSize:'18px',fontWeight:'700'}}>What's your Full Name Name?</label></td>
-                  <td style={{width:"50vw"}}><input placeholder="Name" style={{width:"50vw",marginRight:"5vh", border:"solid 1px black", marginTop:"1vw", borderRadius:"0px", backgroundColor:"transparent"}} type="text" value={name} onChange={(e) => setName(e.target.value)} required /></td>
+                  <td><label style={{paddingLeft:'1vw',fontSize:'18px',fontWeight:'700',width:'15vw',color:"#116D6E"}}>What's your Name?</label></td>
+                  <td style={{width:"50vw"}}><input placeholder="Name" style={{width:"30vw",marginRight:"5vh", border:"solid 1px #87CBB9", marginTop:"1vw", borderRadius:"0px", backgroundColor:"transparent"}} type="text" value={name} onChange={(e) => setName(e.target.value)} required /></td>
                   
                 </tr>
                 <tr style={{height:"15vh", padding:"5vh"}}>
-                  <td><label style={{paddingLeft:'1vw',fontSize:'18px',fontWeight:'700'}}>Where do you stay?:</label></td>
-                  <td><input placeholder="Home Location" style={{width:"50vw", border:"solid 1px black", marginTop:"3vh", borderRadius:"0px", backgroundColor:"transparent"}} type="text" value={homeAddress} onChange={(e) => setHomeAddress(e.target.value)} required /></td>
+                  <td><label style={{paddingLeft:'1vw',fontSize:'18px',fontWeight:'700',width:'15vw',color:"#116D6E"}}>Where do you stay?</label></td>
+                  <td><input placeholder="Home Location" style={{width:"30vw", border:"solid 1px #87CBB9", marginTop:"3vh", borderRadius:"0px", backgroundColor:"transparent"}} type="text" value={homeAddress} onChange={(e) => setHomeAddress(e.target.value)} required /></td>
                 </tr>
                 <tr style={{height:"15vh", padding:"5vh"}}>
-                  <td><label style={{paddingLeft:'1vw',fontSize:'18px',fontWeight:'700'}}>What's your EMail?:</label></td>
-                  <td><input placeholder="EMail Address" style={{width:"50vw", border:"solid 1px black", marginTop:"1vh", borderRadius:"0px", height:"7vh",paddingLeft:"1.5vh", backgroundColor:"transparent"}} type="text" value={email} onChange={(e) => setEMail(e.target.value)} required /></td>
+                  <td><label style={{paddingLeft:'1vw',fontSize:'18px',fontWeight:'700',width:'15vw',color:"#116D6E"}}>What's your EMail?</label></td>
+                  <td><input placeholder="EMail Address" style={{width:"30vw", border:"solid 1px #87CBB9", marginTop:"1vh", borderRadius:"0px", height:"7vh",paddingLeft:"1.5vh", backgroundColor:"transparent"}} type="text" value={email} onChange={(e) => setEMail(e.target.value)} required /></td>
                 </tr>
 
                 <tr style={{height:"15vh", padding:"5vh"}}>
-                  <td><label style={{paddingLeft:'1vw',fontSize:'18px',fontWeight:'700'}}>What's your Gender?:</label></td>
-                  <td><input placeholder="Gender" style={{width:"50vw", border:"solid 1px black", marginTop:"1vh", borderRadius:"0px", height:"7vh",paddingLeft:"1.5vh", backgroundColor:"transparent"}} type="text" value={gender} onChange={(e) => setGender(e.target.value)} required /></td>
+                  <td><label style={{paddingLeft:'1vw',fontSize:'18px',fontWeight:'700',width:'15vw',color:"#116D6E"}}>What's your Gender?</label></td>
+                  <td><input placeholder="Gender" style={{width:"30vw", border:"solid 1px #87CBB9", marginTop:"1vh", borderRadius:"0px", height:"7vh",paddingLeft:"1.5vh", backgroundColor:"transparent"}} type="text" value={gender} onChange={(e) => setGender(e.target.value)} required /></td>
                 </tr>
 
               </tbody>
-            </table>    
+            </table>
+                 
               </div>
             
                
@@ -414,10 +433,11 @@ const loadPassengers = async (contract) => {
             <div style={{backgroundColor:" #FEFEFA", display:"flex", flexDirection:"column", height:"65vh", margin:"1vw"}}>
             <h5 style={{fontWeight:"700",paddingTop:"5vh",color:"black",textAlign:'center'}}>Which Vehicle would you be driving?</h5>
             <h5 style={{color:"black",textAlign:'center'}}>PS. You can skip this section if you wish to enter without one!</h5>
-            <div style={{display:"flex", flexDirection:"row", alignSelf:"center", paddingTop: !(isChoosingVehicle)? "15vh":"1vh"}}>
-            <button onClick={() => setIsChoosingVehicle(true)} style={{ backgroundColor: "#14C38E",fontWeight:"700", padding:'1.5vh',width:"16vw",color: "#FFFFFF", border: "none", alignSelf:"center", marginRight:"4vw",borderRadius:'10px',}}>
+            <div style={{display:"flex", flexDirection:"row", alignSelf:"center",justifyContent:'center', paddingTop: !(isChoosingVehicle)? "15vh":"1vh"}}>
+            <button onClick={() => setIsChoosingVehicle(true)} style={{ backgroundColor: "#14C38E",fontWeight:"700", marginLeft:"4vw",padding:'1.5vh',width:"16vw",color: "#FFFFFF", border: "none", alignSelf:"center", marginRight:"4vw",borderRadius:'10px'}}>
   I have my own vehicle
 </button>
+<h4 style={{color:'black', fontWeight:"700",marginLeft:'-2vw',marginRight:'2vw'}}>OR</h4>
 <button onClick={() => {
   setIsChoosingVehicle(false);
   handleSkipClick(); 
@@ -448,19 +468,20 @@ const loadPassengers = async (contract) => {
             
 
             { isChoosingVehicle &&( 
-            <table>
+            <table style={{marginTop:'3vh'}}>
               <tbody>
               <tr style={{height:"15vh", padding:"5vh"}}>
-                  <td><label style={{paddingLeft:'1vw',fontSize:'18px',fontWeight:'700'}}>Vehicle Name and Type:</label></td>            
-                  <td><input placeholder="Vehicle Name" style={{width:"50vw", border:"solid 1px black", marginTop:"5vh", borderRadius:"0px", backgroundColor:"transparent",marginBottom:"5vh"}} type="text" value={vehicleName} onChange={(e) => setVehicleName(e.target.value)} required /></td>
+                  <td><label style={{paddingLeft:'1vw',fontSize:'18px',fontWeight:'700',color:'#116D6E'}}>Vehicle Name and Type:</label></td>            
+                  <td><input placeholder="Vehicle Name" style={{width:"30vw",marginRight:"5vh", border:"solid 1px #87CBB9", marginTop:"1vw", borderRadius:"0px", backgroundColor:"transparent"}} type="text" value={vehicleName} onChange={(e) => setVehicleName(e.target.value)} required /></td>
               </tr>
               <tr style={{height:"15vh", padding:"5vh"}}>
-                  <td><label style={{paddingLeft:'1vw',fontSize:'18px',fontWeight:'700'}}>Vehicle Number:</label></td>            
-                  <td><input placeholder="Vehicle Number Plate" style={{width:"50vw", border:"solid 1px black", marginTop:"3vh", borderRadius:"0px", backgroundColor:"transparent"}} type="text" value={vehicleNumber} onChange={(e) => setVehicleNumber(e.target.value)} required /></td>
+                  <td><label style={{paddingLeft:'1vw',fontSize:'18px',fontWeight:'700',color:"#116D6E"}}>Vehicle Number:</label></td>            
+                  <td><input placeholder="Vehicle Number Plate"style={{width:"30vw",marginRight:"5vh", border:"solid 1px #87CBB9", marginTop:"1vw", borderRadius:"0px", backgroundColor:"transparent"}} type="text" value={vehicleNumber} onChange={(e) => setVehicleNumber(e.target.value)} required /></td>
               </tr>                
               </tbody>
             </table>)
-            }        
+            }   
+                   
        
             </div> 
             </Carousel.Item>
@@ -527,6 +548,7 @@ const loadPassengers = async (contract) => {
           </div>
         )}
       </div>
+       
     </div>
 </Carousel.Item>)}
 
@@ -536,33 +558,33 @@ const loadPassengers = async (contract) => {
 
             <Carousel.Item>
             <div style={{backgroundColor:" #FEFEFA", display:"flex", flexDirection:"column", height:"65vh", margin:"1vw"}}>
-            <h5 style={{fontWeight:"700",paddingTop:"1vh", textDecoration:"underline",color:'black',textAlign:'center'}}>Last Step: Some Points to Note Down</h5>
-            <h5 style={{marginTop:"1vw",marginBottom:"1vw",color:'black',textAlign:'center'}}>If you are a Vehicle Bearer:</h5>
-            <h5 style={{marginBottom:"1vw",color:'black',textAlign:'center'}}>1.Make sure to re-check your details and <u>note your CID down</u>.</h5>
-            <h5 style={{marginBottom:"1vw",color:'black',textAlign:'center'}}>2.Make sure that you have uploaded the <u>correct paperwork file</u>.</h5>
-            <h5 style={{fontWeight:"700", paddingTop:"1vh", textDecoration:"underline",color:'black',textAlign:'center'}}>Acknowledgment</h5>
-            <div style={{display:"flex", flexDirection:"row", alignSelf:"center", marginTop:"3vh" }}>
-            <input style={{marginTop:"4vh",marginLeft:"10vw",marginRight: "2vw", transform: "scale(2.5)", height: "20px", width: "20px"}}
+            <h5 style={{fontWeight:"700",paddingTop:"1vh", textDecoration:"underline",color:'#116D6E',textAlign:'center'}}>Last Step: Some Points to Note Down</h5>
+            {/* <h5 style={{marginTop:"1vw",marginBottom:"1vw",color:'black',textAlign:'center'}}>If you are a Vehicle Bearer:</h5> */}
+            <h5 style={{marginBottom:"1vw",color:'black',textAlign:'center'}}>1.Make sure to re-check your details and ensure that you have filled all information correctly.<b> If you are a Vehicle Bearer</b>, make sure that you have uploaded the <u>correct paperwork file</u>.</h5>
+            <h5 style={{fontWeight:"700", paddingTop:"1vh", textDecoration:"none",color:'#116D6E',textAlign:'center',marginTop:"-2vh"}}>2.Acknowledgment</h5>
+            <div style={{display:"flex", flexDirection:"row", alignSelf:"center", marginTop:"1vh" }}>
+            <input style={{marginTop:"4vh",marginLeft:"5vw",marginRight: "2vw", transform: "scale(1.5)", height: "20px", width: "20px"}}
           type="checkbox"
           checked={isChecked}
           onChange={handleCheckboxChange}
         />
-        <span style={{ textAlign:"left", marginRight:"7vw" }}>
-        <h5 style={{color:'black',textAlign:'left'}}>I hereby verify that all the information provided by me above is true, correct, and accurate to the best of my knowledge and belief. I understand that any misrepresentation or falsification may have serious consequences and undermine the trust placed in me.</h5>
+        <span style={{ textAlign:"left", marginRight:"5vw",width:"43vw" }}>
+        <h5 style={{color:'black',textAlign:'left', zIndex:'9999'}}>I hereby verify that all the information provided by me above is true, correct, and accurate to the best of my knowledge and belief. I understand that any falsification may have serious consequences & undermine the trust placed in me.</h5>
         </span>
        
         
             </div>     
  
-            <h5 style={{marginBottom:"1vw", marginTop:"1vw"}}>3.When you're done, click on the button below to <b>submit your application for review</b>.</h5> 
+            <h5 style={{marginBottom:"1vw", marginTop:"0.5vw",color:'black',textAlign:'center'}}>3.When you're done, click on the button below to <b>submit your application for review</b>.</h5> 
             <button
   disabled={!isChecked}
   style={{
     alignSelf: "center",
+    zIndex:'9999',
     backgroundColor: "#14C38E",
     padding: "2vh",
     fontWeight: "700",
-    marginTop: "-7vh",
+    marginTop: "-1vh",
     color: "#FEFEFA",
     cursor: !isChecked ? "not-allowed" : "pointer"
   }}
@@ -610,7 +632,7 @@ const loadPassengers = async (contract) => {
           </div>
           <h5 style={{alignSelf:"center",color:"black"}}>Your application to access our platform has been successfully created.</h5>
           <h5 style={{color:'black'}}><b>Your Application ID: {passengerRequests.length}</b></h5>
-          <h5 style={{color:'black'}}>Kindly ensure to make a note of the aforementioned identification as it shall be indispensable for future reference when checking the status of your application.</h5>       
+          <h5 style={{color:'#FF8A8BWhblack'}}>Kindly ensure to make a note of the aforementioned identification as it shall be indispensable for future reference when checking the status of your application.</h5>       
         </Modal.Body>
         <Modal.Footer>
           <button onClick={handleRegistrationModal} style={{backgroundColor:"#14C38E",padding:'1vh',color:'#FEFEFA',fontWeight:'700',borderRadius:"10px"}}>
@@ -621,15 +643,93 @@ const loadPassengers = async (contract) => {
 
 
             
-                    
+              
                   
             </div>
 
                 
     
-                      
+               
             </Carousel.Item>
     </Carousel>
+
+    <div style={{width:"30vw",paddingTop:"2vh",backgroundColor:"#87CBB9",marginTop:'2vh',marginBottom:'2vh',borderRadius:'20px'}}><img src={imageh} style={{height:"68vh",width:'21vw',borderRadius:'20px',marginLeft:"5vw",transform:'scale(1.05)'}} ></img></div>
+        </div>     
+    <div style={{ display: "flex",justifyContent:'center', backgroundColor:"#87CBB9",flexDirection:'row',marginTop:"-9vh",width:"30vw",marginLeft:"10vw",textAlign:'center',height:"8vh",borderRadius:"20px 20px 0px 0px",zIndex:'9999'}}>
+        
+        <div style={{display:'flex',flexDirection:'column',marginLeft:"-2vw"}}>
+          <button
+            className={index == 0 ? "active" : ""}
+            onClick={() => handleNavigationClick(0)}
+            style={{marginLeft:'2vw',backgroundColor:index==0?"white":"transparent",alignSelf:'center',transform:index==0?"translateY(-20px)":"none",borderRadius:index==0?'100%':'',width:index==0?"50px":"",height:index==0?'50px':''}}
+          >
+            <div style={{width:"35px",height:"35px",marginLeft:"0.5vw",marginBottom:'1vh',borderRadius:'100%',backgroundColor:index==0?"#87CBB9":"transparent"}}><CgProfile style={{transform:'scale(1.5)',color:'white',marginTop:index==0?'1vh':'1vh'}}></CgProfile></div>
+          </button>
+          <p style={{color:'white',marginLeft:index==0?'2vw':'2.5vw',fontWeight:'700', fontSize:"small",marginTop:index==0?'-2vh':'-1vh'}}>Profile</p>
+        </div>
+
+        <div style={{display:'flex',flexDirection:'column'}}>
+        <button
+          className={index == 1 ? "active" : ""}
+          onClick={() => handleNavigationClick(1)}
+          style={{marginLeft:'2vw',backgroundColor:index==1?"white":"transparent",alignSelf:'center',transform:index==1?"translateY(-20px)":"none",borderRadius:index==1?'100%':'',width:index==1?"50px":"",height:index==1?'50px':''}}
+
+        >
+          <div style={{width:"35px",height:"35px",marginLeft:"0.5vw",marginBottom:'1vh',borderRadius:'100%',backgroundColor:index==1?"#87CBB9":"transparent"}}><GiCartwheel style={{transform:'scale(1.5)',color:'white',marginTop:index==1?'1vh':'1vh'}}></GiCartwheel></div>
+        </button>
+        <p style={{color:'white',marginLeft:index==1?'2vw':'2.5vw',fontWeight:'700', fontSize:"small",marginTop:index==1?'-2vh':'-1vh'}}>Vehicle</p>
+          
+        </div>
+        
+        {isChoosingVehicle && (
+          <button
+          className={(isChoosingVehicle && (index == 2))? "active" : ""}
+          onClick={() => handleNavigationClick(2)}
+          style={{marginLeft:'2vw',backgroundColor:index==2?"white":"transparent",alignSelf:'center',transform:index==2?"translateY(-20px)":"none",borderRadius:index==2?'100%':'',width:index==2?"50px":"",height:index==2?'50px':''}}
+        >
+         <div style={{width:"35px",height:"35px",marginLeft:"0.5vw",marginBottom:'1vh',borderRadius:'100%',backgroundColor:index==2?"#87CBB9":"transparent",marginTop:'1vh'}}><AiOutlinePaperClip style={{transform:'scale(1.5)',color:'white',marginTop:index==2?'1vh':'1vh',marginBottom:'3vh'}}></AiOutlinePaperClip></div>
+         <p style={{color:'white',fontWeight:'700', fontSize:"small",marginTop:index==2?'1vh':'-2vh'}}>Papers</p>
+        
+        </button>
+        )
+
+        }    
+
+        
+        <div style={{display:'flex',flexDirection:'column'}}>
+        <button
+          className={index==(isChoosingVehicle ? 3 : 2)?"active" : ""}
+          onClick={() => handleNavigationClick(isChoosingVehicle?3:2)}
+          style={{marginLeft: '2vw',
+          backgroundColor: index == (isChoosingVehicle ? 3 : 2) ? 'white' : 'transparent',
+          alignSelf: 'center',
+          transform: index == (isChoosingVehicle ? 3 : 2) ? 'translateY(-20px)' : 'none',
+          borderRadius: index == (isChoosingVehicle ? 3 : 2) ? '100%' : '',
+          width: index == (isChoosingVehicle ? 3 : 2) ? '50px' : '',
+          height: index == (isChoosingVehicle ? 3 : 2) ? '50px' : ''}}
+
+        >
+          <div style={{width: '35px',
+  height: '35px',
+  marginLeft: '0.5vw',
+  marginBottom: '1vh',
+  borderRadius: '100%',
+  backgroundColor: index === (isChoosingVehicle ? 3 : 2) ? '#87CBB9' : 'transparent'}}><IoShieldHalf style={{transform:'scale(1.5)',color:'white',marginTop:index==3?'1vh':'1vh'}}></IoShieldHalf></div>
+        </button>
+        <p style={{color: 'white',
+  marginLeft: index === (isChoosingVehicle ? 3 : 2) ? '2vw' : '2.5vw',
+  fontWeight: 700,
+  fontSize: 'small',
+  marginTop: index === (isChoosingVehicle ? 3 : 2) ? '-2vh' : '-1vh'}}>Auth</p>
+          
+        </div>
+
+       
+      </div>
+
+
+      </div>
+          
 
 
 

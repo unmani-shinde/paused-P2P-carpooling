@@ -11,6 +11,7 @@ import { useRef } from 'react';
 import { Web3Storage } from 'web3.storage';
 import Carousel from 'react-bootstrap/Carousel';
 import axios from 'axios';
+import imageh from "../javascripts/mwhahahaha.png";
 
 
 const apiKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDQ5NTg0QzFjYjQ1QzczMTQwODQ3RjY2NjBkQ0Y5MzNjODNBM2NFMjAiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2ODY1OTAxNDU4NzEsIm5hbWUiOiJjb21tdXRlLWlvLWZpbGUtdXBsb2FkIn0.1E8NnGBcSwApaWAm6mY6F4I1hZWQKhFDCkeOMYrSp7E';
@@ -195,15 +196,15 @@ useEffect(() => {
     <div className='administrator-dashboard-requests-container' style={{backgroundColor:"#F1EEE5", marginTop:"1vh",marginLeft:"1vw",width:"98vw", height:"98vh", display:"flex", flexDirection:"column", border:"solid 1px black", borderRadius:"20px"}}>
         <div className='administrator-dashboard-requests-navbar' style={{backgroundColor:"#FFFFFF",width:"97.75vw", height:"10vh", display:"flex", flexDirection:"row", textAlign:"center", borderRadius:"20px 20px 0px 0px", paddingLeft:"1vh", paddingTop:"1vh"}}>
             <ul style={{listStyle:"none", display:"flex", flexDirection:"row"}}>
-                <li style={{marginTop:"1vh"}}><button style={{backgroundColor:"transparent",color:"black", fontWeight:"700", fontSize:"40px", marginTop:"-1vh",paddingRight:"10vw",marginBottom:"5vh", height:"5vh"}}>COMMUTE.IO</button></li>
+                <li style={{marginTop:"1vh"}}><button style={{marginLeft:"0.5vw",backgroundColor:"transparent",color:"black", fontWeight:"700", fontSize:"40px", marginTop:"-1vh",paddingRight:"10vw",marginBottom:"5vh", height:"5vh"}}><a href='/' style={{border:"none",color:"black"}}>COMMUTE.IO</a></button></li>
             </ul>
         </div><br></br>
         <h2 style={{fontWeight:"700", fontSize:"xx-large",textAlign:'center',color:'black'}}>COMMUTE.IO VERIFICATION PORTAL</h2>
         <h5 style={{fontWeight:"700",fontSize:"x-large",textAlign:'center',color:'black'}}>We're thrilled to have you here.</h5>
         
         {isOriginalSection && !isExistingApplication && !isFreshApplication && (
-           <div style={{display:"flex", flexDirection:"row", alignSelf:"center", border:"1px solid black", height:'50vh',padding:"3vw",width:"70vw",marginTop:'5vh'}}>
-            <div style={{display:"flex", flexDirection:"row", backgroundColor:"#FEFEFA", width:"450vw", height:"40vh", alignSelf:'center'}}>
+           <div style={{display:"flex", flexDirection:"row", alignSelf:"center",backgroundColor:'transparent', border:"1px solid black", height:'50vh',padding:"3vw",width:"70vw",marginTop:'5vh',boxShadow:"0 4px 8px rgba(0, 0, 0, 0.2)"}}>
+            <div style={{display:"flex", flexDirection:"row",  width:"450vw", height:"40vh", alignSelf:'center',boxShadow:"0 4px 8px rgba(0, 0, 0, 0.2)"}}>
             <div style={{display:"flex", flexDirection:"column", alignSelf:"center", paddingTop:'8vh',marginRight:"2vw", width:'25vw',height:'30vh',marginLeft:"5.5vw",textAlign:'center'}}><p style={{textAlign:'center',fontWeight:"700",fontSize:'23px',marginTop:'-2vh'}}>Do you already have an  <br></br>application in progress?</p><button onClick={() => {
   handleExistingApplication();
   handleHideOriginalSection();
@@ -233,6 +234,7 @@ useEffect(() => {
   fontSize: '1rem',
   fontWeight: 'bold',
   cursor: 'pointer',
+  boxShadow:"0 4px 8px rgba(0, 0, 0, 0.2)",
   marginTop: '1vh',
 }} ><Link style={{color:'#FEFEFA'}} to={`/new-application-for-passenger`} className="freshApplication">Initiate New <br></br>Application</Link></button></div>  
          </div>
@@ -241,11 +243,12 @@ useEffect(() => {
         )}
 
         {isExistingApplication && (
-          <div style={{display:"flex", flexDirection:"row", alignSelf:"center", border:"1px solid black", height:'60vh',padding:"3vw",width:"70vw",marginTop:'5vh'}}>
-            <div style={{display:"flex", flexDirection:"column", backgroundColor:"#FEFEFA", width:"450vw", height:"50vh", alignSelf:'center'}}>
-            <h4 style={{fontWeight:"700", marginTop:"4vh",color:"black",textAlign:'center'}}>Enter your request ID to check your application status</h4>
+          <div style={{transform:'scale(1.1)',backgroundColor:'#FEFEFA',display:"flex", flexDirection:"row", alignSelf:"center",height:'60vh',padding:"3vw",width:"70vw",marginTop:'4vh',borderRadius:'20px',boxShadow:"0 4px 8px rgba(0, 0, 0, 0.2)"}}>
+            <div style={{width:'30vw'}}><img src={imageh} style={{transform:"scale(1.1)",height:"45vh",borderRadius:'20px'}}></img></div>
+            <div style={{display:"flex", flexDirection:"column", backgroundColor:"transparent", width:"45vw", height:"55vh", alignSelf:'center',marginRight:"-2vw"}}>
+            <h4 style={{fontWeight:"700", marginTop:"4vh",color:"black",textAlign:'center'}}>Enter your request ID to check <br></br>your application status</h4>
           <input placeholder="Request ID" value={userRequestID}
-      onChange={handleUserRequestIDChange} style={{width:"30vw",border:"solid 1px black", marginTop:"1vw", borderRadius:"0px", backgroundColor:"transparent", alignSelf:'center'}} type="text" required /><h4 style={{fontWeight:"700", marginTop:"2vh",color:"black",textAlign:'center'}}>Connected Metamask Wallet Address</h4>
+      onChange={handleUserRequestIDChange} style={{width:"30vw",border:"solid 1px black", marginTop:"1vw", borderRadius:"0px", backgroundColor:"transparent", alignSelf:'center',textAlign:'center'}} type="text" required /><h4 style={{fontWeight:"700", marginTop:"2vh",color:"black",textAlign:'center'}}>Connected Metamask <br></br>Wallet Address</h4>
       
           <input placeholder={accounts[0]} style={{width:"35vw",alignSelf:'center', border:"solid 1px black", textAlign:'center',marginTop:"1vw", borderRadius:"0px", backgroundColor:"transparent"}} type="text" readOnly />
           <div style={{alignSelf:'center'}}>

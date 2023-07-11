@@ -66,7 +66,7 @@ function App2() {
       <Switch>
       <Route exact path="/" component={HomePageFinal} />
       <Route exact path="/commute-io-verification-portal" component={AdministratorDashboardUserApplicationStatus} />
-        <Route exact path="/login" component={Login} />
+        <Route exact path="/login" component={LoginPage} />
         <Route exact path="/pfp" component={ProfilePictureEditor} />
         <Route path='/viewallrides/:passengerID' component={ViewAllRides} />
         <Route path="/dashboard/:passengerID" component={DashboardPage} />
