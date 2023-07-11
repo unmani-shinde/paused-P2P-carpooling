@@ -7,8 +7,11 @@
 </h1>
 
 <div align="center">
-   <strong>P2P Carpooling Using Blockchain</strong><br> P2P Decentralised Carpooling Network -
+  <img src="https://github.com/unmani-shinde/paused-P2P-carpooling/assets/95737452/321eff08-b2a8-4f10-9988-905baa5d5677"><br></br>
+  <strong><h3>Peer-2-Peer Carpooling Using Blockchain Technology</h3</strong><br>
+  Built on Ethereum -
   CoC Inheritance 2022 || Team PAUS-ed <br> <br>
+
 </div>
 <hr>
 
@@ -19,8 +22,6 @@
 - [Links](#links)
 - [Tech Stack](#tech-stack)
 - [File Structure](#file-structure)
-- [Progress](#progress)
-- [Future Scope](#future-scope)
 - [Applications](#applications)
 - [Project Setup](#project-setup)
 - [Usage](#usage)
@@ -45,8 +46,6 @@ This project therefore aims to move ride-sharing and car hire are to blockchain 
 - [Drive Link to Screenshots of your project](https://drive.google.com/drive/folders/1-4yxv0tFacmeiL3HV4LnqMMpuFB9aEDb?usp=sharing)
 - [Hosted Website Link]()
 - [Hosted Backend Link]()
-
-Add any more links/resources you used for your project
 
 ## 🤖Tech-Stack
 
@@ -77,9 +76,11 @@ Add any more links/resources you used for your project
 
 
 #### File Structure
-```
+<details>
+  
+  ```
 📦master
- ┣ 📂server
+ ┣ 📂backend
  ┃ ┗ 📂Schema
  ┃ ┃  ┗ 📜 ChatModel.js
  ┃ ┃  ┗ 📜 MessageModel.js                               
@@ -169,6 +170,12 @@ Add any more links/resources you used for your project
  
  ```
 
+    
+
+</details>
+
+
+
 ## 💸Applications
 
 Peer-to-peer carpooling platform based on blockchain has the potential to solve several real-life problems, including:
@@ -198,12 +205,13 @@ Monetization of the platform can be achieved through:
 * **Token System**: The platform can use a token system to incentivize users to participate in carpooling, and sell tokens to generate revenue.
 ## 🛠Project Setup
 
->Include your project setup basics here. Steps for how someone else can setup your project on their machine. Add any relevant details as well.
+> Want to setup this project on your machine? Follow these steps:
 
 * STEP 1: [Install Node.js and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm): Node.js is an open-source, cross-platform JavaScript runtime environment that executes JavaScript code outside of a web browser. It allows developers to build server-side applications in JavaScript and run them on the server. It includes a rich library of modules, known as npm (Node Package Manager), that enables developers to add functionality to their applications quickly and easily. It is widely used for web application development, building networked applications, and developing server-side scripts.
 * STEP 2: [Install and configure MongoDB Compass](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-windows/) MongoDB is a popular, open-source NoSQL database management system. It is classified as a document-oriented database, which means that it stores data in the form of documents (in BSON format) instead of traditional table-based relational databases.
 * STEP 3: [Install Metamask Extension](https://metamask.io/) MetaMask is a browser extension and mobile app that provides an interface for interacting with decentralized applications (dApps) built on the Ethereum blockchain. It allows users to securely store, manage, and send Ethereum and other Ethereum-based tokens, as well as interact with dApps in a user-friendly way.
 * STEP 4: [Configure a Metamask Account](https://docs.metamask.io/guide/#why-metamask)
+* STEP 5: Navigate to the repository and clone it: [Clone our GitHub Respository](https://github.com/unmani-shinde/paused-P2P-carpooling)
 
 ## 💻Usage
 
