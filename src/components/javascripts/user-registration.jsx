@@ -18,8 +18,6 @@ import { Web3Storage } from 'web3.storage';
 import Carousel from 'react-bootstrap/Carousel';
 import axios from 'axios';
 import imageh from "./image-removebg-preview (14).png";
-import zIndex from '@mui/material/styles/zIndex';
-
 
 const apiKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDQ5NTg0QzFjYjQ1QzczMTQwODQ3RjY2NjBkQ0Y5MzNjODNBM2NFMjAiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2ODY1OTAxNDU4NzEsIm5hbWUiOiJjb21tdXRlLWlvLWZpbGUtdXBsb2FkIn0.1E8NnGBcSwApaWAm6mY6F4I1hZWQKhFDCkeOMYrSp7E';
 const web3Storage = new Web3Storage({ token: apiKey });
