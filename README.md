@@ -44,8 +44,8 @@ This project therefore aims to move ride-sharing and car hire are to blockchain 
 - [GitHub Repository](https://github.com/unmani-shinde/paused-P2P-carpooling)
 - [Demo Video](https://drive.google.com/drive/folders/1j7mK10Qer7rMUcTG3Q0DZU0UBT-TxGUL?usp=sharing)
 - [Drive Link to Screenshots of your project](https://drive.google.com/drive/folders/1-4yxv0tFacmeiL3HV4LnqMMpuFB9aEDb?usp=sharing)
-- [Hosted Website Link]()
-- [Hosted Backend Link]()
+- [Hosted Website Link](https://commute-io.netlify.app/)
+- [Hosted Backend Link](https://commute-server.onrender.com/)
 
 ## 🤖Tech-Stack
 
