@@ -8,7 +8,7 @@
 
 <div align="center">
   <img src="https://github.com/unmani-shinde/paused-P2P-carpooling/assets/95737452/321eff08-b2a8-4f10-9988-905baa5d5677"><br></br>
-  <strong><h3>Peer-2-Peer Carpooling Using Blockchain Technology</h3</strong><br>
+  <strong><h3>Peer-2-Peer Carpooling Using Blockchain Technology</h3></strong><br>
   Built on Ethereum -
   CoC Inheritance 2022 || Team PAUS-ed <br> <br>
 
